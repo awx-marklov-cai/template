@@ -1,0 +1,26 @@
+{
+    "name": "turborepo-basic-shared",
+    "version": "0.0.0",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "build": "turbo run build",
+        "dev": "turbo run dev --parallel",
+		"test": "turbo run dev --parallel",
+        "lint": "turbo run lint",
+        "format": "biome format --write"
+    },
+    "devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+        "turbo": "latest",
+		"typescript": "5.4.5"
+	},
+    "engines": {
+        "npm": ">=7.0.0",
+        "node": ">=18.0.0"
+    },
+    "packageManager": "pnpm@9.3.0"
+}

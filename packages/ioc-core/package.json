@@ -1,0 +1,28 @@
+{
+	"name": "@airwallex-dev-scale/iam-ioc-core",
+	"version": "0.1.2",
+	"repository": "https://gitlab.awx.im/airwallex-dev-scale/iam-web-sdk.git",
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"types": "dist/cjs/index.d.ts",
+	"scripts": {
+		"build": "rimraf dist/ && tsc --project tsconfig.build.cjs.json && tsc-alias --project tsconfig.build.cjs.json && tsc --project tsconfig.build.esm.json && tsc-alias --project tsconfig.build.esm.json",
+		"dev": "tsc --project tsconfig.build.cjs.json && tsc-alias --project tsconfig.build.cjs.json && tsc --project tsconfig.build.esm.json && tsc-alias --project tsconfig.build.esm.json",
+		"lint-staged": "lint-staged",
+		"prettier": "biome format --write",
+		"test": "vitest"
+	},
+	"dependencies": {
+		"ts-base": "workspace:*"
+	},
+	"devDependencies": {
+		"@vitest/coverage-v8": "^3.0.6",
+		"jsdom": "^24.1.0",
+		"lint-staged": "^13.1.2",
+		"rimraf": "^5.0.7",
+		"tsc-alias": "^1.8.10",
+		"vite": "^6.1.1",
+		"vitest": "^3.0.6",
+		"@biomejs/biome": "^1.9.4"
+	}
+}

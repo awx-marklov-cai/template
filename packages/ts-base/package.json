@@ -1,0 +1,88 @@
+{
+	"name": "ts-base",
+	"version": "0.0.16",
+	"repository": "https://github.com/Markloff/journery_natulata.git",
+	"exports": {
+		".": {
+			"require": "./dist/cjs/index.js",
+			"import": "./dist/esm/index.js",
+			"types": "./dist/index.d.ts"
+		},
+		"./event": {
+			"require": "./dist/cjs/event.js",
+			"import": "./dist/esm/event.js",
+			"types": "./dist/esm/event.d.ts"
+		},
+		"./lifecycle": {
+			"require": "./dist/cjs/lifecycle.js",
+			"import": "./dist/esm/lifecycle.js",
+			"types": "./dist/esm/lifecycle.d.ts"
+		},
+		"./linkedList": {
+			"require": "./dist/cjs/LinkedList.js",
+			"import": "./dist/esm/LinkedList.js",
+			"types": "./dist/esm/LinkedList.d.ts"
+		},
+		"./iterator": {
+			"require": "./dist/cjs/iterator.js",
+			"import": "./dist/esm/iterator.js",
+			"types": "./dist/esm/iterator.d.ts"
+		},
+		"./uri": {
+			"require": "./dist/cjs/uri.js",
+			"import": "./dist/esm/uri.js",
+			"types": "./dist/esm/uri.d.ts"
+		},
+		"./errorMessage": {
+			"require": "./dist/cjs/errorMessage.js",
+			"import": "./dist/esm/errorMessage.js",
+			"types": "./dist/esm/errorMessage.d.ts"
+		},
+		"./platform": {
+			"require": "./dist/cjs/platform.js",
+			"import": "./dist/esm/platform.js",
+			"types": "./dist/esm/platform.d.ts"
+		},
+		"./errors": {
+			"require": "./dist/cjs/errors.js",
+			"import": "./dist/esm/errors.js",
+			"types": "./dist/esm/errors.d.ts"
+		},
+		"./async": {
+			"require": "./dist/cjs/async.js",
+			"import": "./dist/esm/async.js",
+			"types": "./dist/esm/async.d.ts"
+		},
+		"./type": {
+			"require": "./dist/cjs/type.js",
+			"import": "./dist/esm/type.js",
+			"types": "./dist/esm/type.d.ts"
+		},
+		"./jsonSchema": {
+			"require": "./dist/cjs/jsonSchema.js",
+			"import": "./dist/esm/jsonSchema.js",
+			"types": "./dist/esm/jsonSchema.d.ts"
+		}
+	},
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"types": "dist/cjs/index.d.ts",
+	"scripts": {
+		"build": "rimraf dist/ && tsc --project tsconfig.build.cjs.json && tsc-alias --project tsconfig.build.cjs.json && tsc --project tsconfig.build.esm.json && tsc-alias --project tsconfig.build.esm.json",
+		"dev": "tsc --project tsconfig.build.cjs.json && tsc-alias --project tsconfig.build.cjs.json && tsc --project tsconfig.build.esm.json && tsc-alias --project tsconfig.build.esm.json",
+		"lint-staged": "lint-staged",
+		"prettier": "biome format --write",
+		"test": "vitest"
+	},
+	"devDependencies": {
+		"@vitest/coverage-v8": "^3.0.6",
+		"jsdom": "^24.1.0",
+		"lint-staged": "^13.1.2",
+		"prettier": "^3.3.2",
+		"rimraf": "^5.0.7",
+		"tsc-alias": "^1.8.10",
+		"vite": "^6.1.1",
+		"vitest": "^3.0.6",
+		"@biomejs/biome": "^1.9.4"
+	}
+}
